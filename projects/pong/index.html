@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../../css/main.css" />
+    <title>Saul Neri</title>
+
+    <!-- For canvas -->
+    <script src="lib/p5.js"></script>
+    <script src="lib/p5.dom.js"></script>
+
+    <script src="Ball.js"></script>
+    <script src="Enemy.js"></script>
+    <script src="Player.js"></script>
+    <script src="sketch.js"></script>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background: #021c1e;
+      }
+
+      body #myContainer {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
+      body #myContainer canvas {
+        display: block;
+        border: 3px solid #6fb98f;
+        border-radius: 5px;
+        padding: 5px;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding"><div class="portrait"></div></div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../../about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item current">
+            <a href="../../projects.html" class="nav-link">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="pong">
+      <h1 class="lg-heading">Ping <span class="text-secondary">pong</span></h1>
+      <h2 class="sm-heading">Pong game, instructions bellow...</h2>
+      <div id="myContainer"></div>
+      <h2 class="sm-heading">
+        Use the <span class="text-secondary">Up/Down</span> arrows to move your
+        paddle (<span class="text-secondary">right</span> paddle).
+      </h2>
+    </main>
+
+    <footer class="main-footer">Saul Neri &copy;</footer>
+  </body>
+  <script src="../../js/main.js"></script>
+  <script>
+    window.addEventListener(
+      "keydown",
+      function(e) {
+        // space and arrow keys
+        if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+          e.preventDefault();
+        }
+      },
+      false
+    );
+  </script>
+</html>
